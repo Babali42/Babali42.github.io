@@ -15,47 +15,47 @@ var pist_1_kick = new Pizzicato.Sound({source: 'file',
   loadIncrease();
 });
 var pist_1_1_kick_fx = new Pizzicato.Sound({source: 'file',
-options: { path: 'sounds/1_1_kick_fx.mp3', loop: true }}, function() {
+options: { path: 'fayacan/sounds/1_1_kick_fx.mp3', loop: true }}, function() {
   loadIncrease();
 });
 var pist_2_snare = new Pizzicato.Sound({source: 'file',
-options: { path: 'sounds/2_snare.mp3', loop: true }}, function() {
+options: { path: 'fayacan/sounds/2_snare.mp3', loop: true }}, function() {
   loadIncrease();
 });
 var pist_2_snare_fx = new Pizzicato.Sound({source: 'file',
-options: { path: 'sounds/2_1_snare_fx.mp3', loop: true }}, function() {
+options: { path: 'fayacan/sounds/2_1_snare_fx.mp3', loop: true }}, function() {
   loadIncrease();
 });
 var pist_3_hat = new Pizzicato.Sound({source: 'file',
-options: { path: 'sounds/3_hat.mp3', loop: true }}, function() {
+options: { path: 'fayacan/sounds/3_hat.mp3', loop: true }}, function() {
   loadIncrease();
 });
 var pist_3_1_hat_fx = new Pizzicato.Sound({source: 'file',
-options: { path: 'sounds/3_1_hat_fx.mp3', loop: true }}, function() {
+options: { path: 'fayacan/sounds/3_1_hat_fx.mp3', loop: true }}, function() {
   loadIncrease();
 });
 var pist_4_toms = new Pizzicato.Sound({source: 'file',
-options: { path: 'sounds/4_toms.mp3', loop: true }}, function() {
+options: { path: 'fayacan/sounds/4_toms.mp3', loop: true }}, function() {
   loadIncrease();
 });
 var pist_5_bass = new Pizzicato.Sound({source: 'file',
-options: { path: 'sounds/5_bass.mp3', loop: true }}, function() {
+options: { path: 'fayacan/sounds/5_bass.mp3', loop: true }}, function() {
   loadIncrease();
 });
 var pist_6_sub_bass = new Pizzicato.Sound({source: 'file',
-options: { path: 'sounds/6_sub_bass.mp3', loop: true }}, function() {
+options: { path: 'fayacan/sounds/6_sub_bass.mp3', loop: true }}, function() {
   loadIncrease();
 });
 var pist_7_skank = new Pizzicato.Sound({source: 'file',
-options: { path: 'sounds/7_skank.mp3', loop: true }}, function() {
+options: { path: 'fayacan/sounds/7_skank.mp3', loop: true }}, function() {
   loadIncrease();
 });
 var pist_7_1_skank_fx = new Pizzicato.Sound({source: 'file',
-options: { path: 'sounds/7_1_skank_fx.mp3', loop: true }}, function() {
+options: { path: 'fayacan/sounds/7_1_skank_fx.mp3', loop: true }}, function() {
   loadIncrease();
 });
 var pist_8_melodies = new Pizzicato.Sound({source: 'file',
-options: { path: 'sounds/8_melodies.mp3', loop: true }}, function() {
+options: { path: 'fayacan/sounds/8_melodies.mp3', loop: true }}, function() {
   loadIncrease();
 });
 
