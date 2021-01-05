@@ -17,19 +17,36 @@
 	<body class="modal-active main-page">
         <div id="modal-container" class="two" >
             <div id="mod" class="modal-background">
-                <div class="modal">
-                  <h2>FayacanSon Dub Mixer</h2>
-                  <h3>
-                    <div style="display:inline">Chargement des sons :</div>
-                    <div style="display:inline" id="number-sounds-loaded">0</div>
-                    <div style="display:inline">%</div>
-                  </h3>
-                  <button class="button button-disabled" id="close-modal" disabled="true" >Start</button>
-                  <button class="button button-disabled" id="tuto-modal" disabled="true" >Tutoriel</button>
-                  <button class="button" id="tuto-credit">Crédits</button>
-                  <svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
-                    <rect x="0" y="0" fill="none" width="315" height="180" rx="3" ry="3"></rect>
+                <div class="modal" style="max-height: calc(100vh - 200px);
+                overflow-y: auto;">
+                  <div id="startModal">
+                    <h2>Fayacan Son dub mixer</h2>
+                    <h3>
+                      <div style="display:inline">Chargement des sons :</div>
+                      <div style="display:inline" id="number-sounds-loaded">0</div>
+                      <div style="display:inline">%</div>
+                    </h3>
+                    <button class="button button-disabled" id="close-modal" disabled="true" >Start</button>
+                    <button class="button button-disabled" id="tuto-modal" disabled="true" >Tutoriel</button>
+                    <button class="button" onclick="myFunction()">Crédits</button>
+                    <svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+                      <rect x="0" y="0" fill="none" width="315" height="180" rx="3" ry="3"></rect>
                     </svg>
+                  </div>
+  
+                  <div id="creditModal" style="display: none;">
+                    <h2>Equipe</h2>
+                    <h3>Fayacan Son</h3>
+                    <h3>Babali</h3>
+                    <h3>Alexandre</h3>
+                    <h2>Détails</h2>
+                    <h3>Concept, musique et modèles 3D par Fayacan</h3>
+                    <h3></h3>
+                    <button class="button" onclick="myFunction()">Crédits</button>
+                    <svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+                      <rect x="0" y="0" fill="none" width="315" height="180" rx="3" ry="3"></rect>
+                    </svg>
+                  </div>
                 </div>
             </div>
         </div>
@@ -101,6 +118,18 @@
             $('.menu-top-left').removeClass('invisible');
             $('.menu-bottom-center').removeClass('invisible');
           }
+
+          function myFunction() {
+              var creditModal = document.getElementById("creditModal");
+              var startModal = document.getElementById("startModal");
+              if (creditModal.style.display === "none") {
+                  creditModal.style.display = "table-cell";
+                  startModal.style.display = "none";
+              } else {
+                 creditModal.style.display = "none";
+                 startModal.style.display = "table-cell";
+              }
+          } 
         </script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pizzicato/0.6.4/Pizzicato.min.js"></script>
