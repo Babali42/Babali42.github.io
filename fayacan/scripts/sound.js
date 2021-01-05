@@ -7,11 +7,11 @@ var numberLoaded = 0;
 var numberTotalToLoad = 13;
 
 var pist_0_Transition = new Pizzicato.Sound({source: 'file',
-options: { path: 'sounds/0_transitions.mp3', loop: true }}, function() {
+options: { path: 'fayacan/sounds/0_transitions.mp3', loop: true }}, function() {
   loadIncrease();
 });
 var pist_1_kick = new Pizzicato.Sound({source: 'file',
-  options: { path: 'sounds/1_kick.mp3', loop: true }}, function() {
+  options: { path: 'fayacan/sounds/1_kick.mp3', loop: true }}, function() {
   loadIncrease();
 });
 var pist_1_1_kick_fx = new Pizzicato.Sound({source: 'file',
