@@ -1,1 +1,110 @@
-Hello World
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html lang="en">
+	<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Animate CCS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+		
+    <title>FayacanSon Dub Mixer</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/animation.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.0.0/introjs.css" rel="stylesheet">
+	</head>
+	<body class="modal-active main-page">
+        <div id="modal-container" class="two" >
+            <div id="mod" class="modal-background">
+                <div class="modal">
+                  <h2>FayacanSon Dub Mixer</h2>
+                  <h3>
+                    <div style="display:inline">Chargement des sons :</div>
+                    <div style="display:inline" id="number-sounds-loaded">0</div>
+                    <div style="display:inline">%</div>
+                  </h3>
+                  <button class="button button-disabled" id="close-modal" disabled="true" >Start</button>
+                  <button class="button button-disabled" id="tuto-modal" disabled="true" >Tutoriel</button>
+                  <button class="button" id="tuto-credit">Crédits</button>
+                  <svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+                    <rect x="0" y="0" fill="none" width="315" height="180" rx="3" ry="3"></rect>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="content" data-hint="Envoie ton mix ici en ajustant le volume via les faders (mouvement de haut en bas) et les effets avec les potards (mouvement de gauche à droite) !" data-hintPosition="top-middle">
+          <div class="menu-top-left invisible">
+              <div class="open-modal"><i class="fa fa-bars fa-2x" aria-hidden="true" data-hint="Retour vers le menu" data-hintPosition="middle-middle"><span>Menu</span></i></div>
+              <div id="facebookLink"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"><span>Facebook</span></i></div>
+              <div id="youtubeLink"><i class="fa fa-youtube fa-2x" aria-hidden="true"><span>Youtube</span></i></div>
+              <div id="soundcloudLink"><i class="fa fa-soundcloud fa-2x" aria-hidden="true"><span>Soundcloud</span></i></div>
+              <div id="play"><i class="fa fa-play fa-2x" aria-hidden="true" data-hint="Jouer ou arrêter le son" data-hintPosition="middle-middle"></i></div>
+              <div id="pause" class="invisible"><i class="fa fa-pause fa-2x" aria-hidden="true"></i></div>
+          </div>
+          <canvas id="c"></canvas>
+        </div>
+
+        <!--JS Bootstrap-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.0.0/intro.js"></script>
+        <script type="text/javascript">
+          //Func open Modal
+          $('.open-modal').click(function(){
+            $('#modal-container').removeAttr('class').addClass('two');
+            $('body').addClass('modal-active');
+            pause();
+            if(intro){
+              intro.hideHints();
+            }
+          });
+          //Func close Modal
+          $('#close-modal').click(function(){
+            closeModal();
+            play();
+          });
+
+          $('#tuto-modal').click(function(){
+            closeModal();
+            intro = introJs();
+            intro.setOption("hintButtonLabel", "Ok !");
+            intro.addHints();
+          });
+
+          $('#tuto-credit').click(function(){
+            location.href = "credits.html";
+          });
+
+          document.getElementById("facebookLink").onclick = function () {
+            location.href = "https://www.facebook.com/FayacanSon/";
+          };
+
+          document.getElementById("youtubeLink").onclick = function () {
+            location.href = "https://www.youtube.com/channel/UCSGj18XL9iVpVZ4y7Rg3IEA";
+          };
+
+          document.getElementById("soundcloudLink").onclick = function () {
+            location.href = "https://soundcloud.com/user-683591571";
+          };
+
+          document.getElementById("play").onclick = function () {
+            play();
+          };
+
+          document.getElementById("pause").onclick = function () {
+            pause();
+          };
+
+          function closeModal(){
+            $('#modal-container').addClass('out');
+            $('body').removeClass('modal-active');
+            $('.menu-top-left').removeClass('invisible');
+            $('.menu-bottom-center').removeClass('invisible');
+          }
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pizzicato/0.6.4/Pizzicato.min.js"></script>
+        <script src="scripts/sound.js"></script>
+		    <script type="module" src="scripts/animation.js"></script>
+	</body>
+</html>
