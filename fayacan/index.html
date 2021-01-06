@@ -34,10 +34,13 @@
                     </svg>
                   </div>
   
-                  <div id="creditModal" style="display: none;">
+                  <div id="creditModal" class="creditModal" style="display: none;">
                     <h2>Equipe</h2>
+                    <div class="team-member-img team-img-1"></div>
                     <h3>Fayacan Son</h3>
+                    <div class="team-member-img team-img-2"></div>
                     <h3>Babali</h3>
+                    <div class="team-member-img team-img-3"></div>
                     <h3>Alexandre</h3>
                     <h2>Détails</h2>
                     <h3>Concept, musique et modèles 3D par Fayacan</h3>
@@ -123,7 +126,7 @@
               var creditModal = document.getElementById("creditModal");
               var startModal = document.getElementById("startModal");
               if (creditModal.style.display === "none") {
-                  creditModal.style.display = "table-cell";
+                  creditModal.style.display = "flex";
                   startModal.style.display = "none";
               } else {
                  creditModal.style.display = "none";

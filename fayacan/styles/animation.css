@@ -284,3 +284,38 @@ html.modal-active, body.modal-active {
     transform: scale(0);
     }
 }
+
+.team-member-img{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    position: relative;
+    cursor: default;
+    box-shadow: inset 0 0 0 16px rgba(255,255,255,.6),0 1px 2px rgba(0,0,0,.1);
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.team-img-1{
+    background-image: url(../images/fayacan.jpg);
+    background-size: cover;
+}
+
+.team-img-2{
+    background-image: url(../images/babali.jpg);
+    background-size: cover;
+}
+
+.team-img-3{
+    background-image: url(../images/analy-web.png);
+    background-size: cover;
+}
+
+.creditModal{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
