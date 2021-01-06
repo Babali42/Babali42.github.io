@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
     margin: 0;
@@ -12,7 +13,7 @@ html, body {
     height: 100%;
 }
 
-.main-page .introjs-hint-pulse{
+.main-page .introjs-hint-pulse {
     background-color: rgba(55, 162, 40, 0.74);
 }
 
@@ -36,16 +37,16 @@ html, body {
     z-index: 9;
 }
 
-.menu-top-left > div > i {
+.menu-top-left>div>i {
     color: white;
     display: inline-flex;
 }
 
-.menu-top-left > div > i:hover {
+.menu-top-left>div>i:hover {
     color: grey;
 }
 
-.menu-top-left > div > i > span {
+.menu-top-left>div>i>span {
     visibility: hidden;
     background-color: grey;
     color: white;
@@ -59,13 +60,13 @@ html, body {
     transition: opacity 0.3s;
 }
 
-.menu-top-left > div > i:hover > span {
+.menu-top-left>div>i:hover>span {
     visibility: visible;
     opacity: 1;
 }
 
 /* Tooltip arrow */
-.menu-top-left > div > i:hover > span::after {
+.menu-top-left>div>i:hover>span::after {
     content: "";
     position: absolute;
     top: 38%;
@@ -76,21 +77,22 @@ html, body {
     border-color: transparent #555 transparent transparent;
 }
 
-.menu-top-left > i > .fa-play {
+.menu-top-left>i>.fa-play {
     color: blue;
     padding: 10px;
 }
 
-.menu-top-left > i > .fa-pause {
+.menu-top-left>i>.fa-pause {
     color: red;
     padding: 10px;
 }
 
 .invisible {
-    display: none!important;
+    display: none !important;
 }
 
-html.modal-active, body.modal-active {
+html.modal-active,
+body.modal-active {
     overflow: hidden;
 }
 
@@ -105,8 +107,13 @@ html.modal-active, body.modal-active {
     z-index: 1;
 }
 
-.modal { z-index: 100000000000000000000 !important; }
-.introjs-fixedTooltip { z-index: 200000000000000000000 !important; }
+.modal {
+    z-index: 100000000000000000000 !important;
+}
+
+.introjs-fixedTooltip {
+    z-index: 200000000000000000000 !important;
+}
 
 #modal-container.two {
     transform: scale(1);
@@ -122,7 +129,7 @@ html.modal-active, body.modal-active {
     animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
-#modal-container.two + .content {
+#modal-container.two+.content {
     animation: scaleBack 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
@@ -138,7 +145,7 @@ html.modal-active, body.modal-active {
     animation: scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
-#modal-container.two.out + .content {
+#modal-container.two.out+.content {
     animation: scaleForward 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
@@ -219,6 +226,7 @@ html.modal-active, body.modal-active {
     0% {
         background: rgba(0, 0, 0, 0);
     }
+
     100% {
         background: rgba(0, 0, 0, 0.7);
     }
@@ -226,72 +234,79 @@ html.modal-active, body.modal-active {
 
 @keyframes fadeOut {
     0% {
-    background: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.7);
     }
+
     100% {
-    background: rgba(0, 0, 0, 0);
+        background: rgba(0, 0, 0, 0);
     }
 }
 
 @keyframes scaleUp {
     0% {
-    transform: scale(0.8) translateY(1000px);
-    opacity: 0;
+        transform: scale(0.8) translateY(1000px);
+        opacity: 0;
     }
+
     100% {
-    transform: scale(1) translateY(0px);
-    opacity: 1;
+        transform: scale(1) translateY(0px);
+        opacity: 1;
     }
 }
 
 @keyframes scaleDown {
     0% {
-    transform: scale(1) translateY(0px);
-    opacity: 1;
+        transform: scale(1) translateY(0px);
+        opacity: 1;
     }
+
     100% {
-    transform: scale(0.8) translateY(1000px);
-    opacity: 0;
+        transform: scale(0.8) translateY(1000px);
+        opacity: 0;
     }
 }
 
 @keyframes scaleBack {
     0% {
-    transform: scale(1);
+        transform: scale(1);
     }
+
     100% {
-    transform: scale(0.85);
+        transform: scale(0.85);
     }
 }
 
 @keyframes scaleForward {
     0% {
-    transform: scale(0.85);
+        transform: scale(0.85);
     }
+
     100% {
-    transform: scale(1);
+        transform: scale(1);
     }
 }
 
 @keyframes quickScaleDown {
     0% {
-    transform: scale(1);
+        transform: scale(1);
     }
+
     99.9% {
-    transform: scale(1);
+        transform: scale(1);
     }
+
     100% {
-    transform: scale(0);
+        transform: scale(0);
     }
 }
 
-.team-member-img{
+.team-member-img {
     width: 20vh;
     height: 20vh;
     border-radius: 50%;
     position: relative;
     cursor: default;
-    box-shadow: inset 0 0 0 16px rgba(255,255,255,.6),0 1px 2px rgba(0,0,0,.1);
+    box-shadow: inset 0 0 0 16px rgba(255, 255, 255, .6), 0 1px 2px rgba(0, 0, 0, .1);
     -webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
@@ -299,23 +314,41 @@ html.modal-active, body.modal-active {
     transition: all .4s ease-in-out;
 }
 
-.team-img-1{
+.team-img-1 {
     background-image: url(../images/fayacan.jpg);
     background-size: cover;
 }
 
-.team-img-2{
+.team-img-2 {
     background-image: url(../images/babali.jpg);
     background-size: cover;
 }
 
-.team-img-3{
+.team-img-3 {
     background-image: url(../images/analy-web.png);
     background-size: cover;
 }
 
-.creditModal{
+.creditModal {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.team-img-1:hover {
+    animation: fadeInUp
 }
