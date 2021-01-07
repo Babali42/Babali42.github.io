@@ -1,11 +1,23 @@
+*{
+    font-family: "Glacial Indifference";
+}
+
+
 html,
 body {
     height: 100%;
     width: 100%;
     margin: 0;
     background-color: black;
-    font-family: helvetica neue, helvetica, arial, sans-serif;
+    font-family: "Glacial Indifference";
     font-weight: 200;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Norwester', arial;
 }
 
 .content {
@@ -172,8 +184,9 @@ body.modal-active {
 }
 
 #modal-container .modal-background .modal p {
-    font-size: 18px;
-    line-height: 22px;
+    max-width: 50vh;
+    text-align: justify;
+    font-size: 14px;
 }
 
 #modal-container .modal-background .modal .modal-svg {
@@ -332,7 +345,6 @@ body.modal-active {
 .creditModal {
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 @keyframes fadeInUp {
@@ -349,6 +361,20 @@ body.modal-active {
     }
 }
 
-.team-img-1:hover {
-    animation: fadeInUp
+.team-info-3 {
+    opacity: 0;
+}
+
+.team-img-3:hover  > .team-info-1 {
+    opacity: 1;
+    transform : Scale(1);
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+}
+
+.credit-link{
+    color: rgb(96 63 168);
 }
