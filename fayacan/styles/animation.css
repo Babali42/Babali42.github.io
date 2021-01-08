@@ -339,12 +339,12 @@ body.modal-active {
 }
 
 .team-img-1 {
-    background-image: url(../images/fayacan.jpg);
+    background-image: url(../images/fayacan.png);
     background-size: cover;
 }
 
 .team-img-2 {
-    background-image: url(../images/babali.jpg);
+    background-image: url(../images/babali.png);
     background-size: cover;
 }
 
