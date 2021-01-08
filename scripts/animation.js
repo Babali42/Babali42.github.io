@@ -1,10 +1,17 @@
 import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r114/build/three.module.js';
-import {OrbitControls} from 'https://threejsfundamentals.org/threejs/resources/threejs/r114/examples/jsm/controls/OrbitControls.js';
-import {GLTFLoader} from 'https://threejsfundamentals.org/threejs/resources/threejs/r114/examples/jsm/loaders/GLTFLoader.js';
+import {
+    OrbitControls
+} from 'https://threejsfundamentals.org/threejs/resources/threejs/r114/examples/jsm/controls/OrbitControls.js';
+import {
+    GLTFLoader
+} from 'https://threejsfundamentals.org/threejs/resources/threejs/r114/examples/jsm/loaders/GLTFLoader.js';
 
 function main() {
     const canvas = document.querySelector('#c');
-    const renderer = new THREE.WebGLRenderer({canvas, antialias: true });
+    const renderer = new THREE.WebGLRenderer({
+        canvas,
+        antialias: true
+    });
 
     const fov = 45;
     const aspect = 2;
@@ -15,11 +22,11 @@ function main() {
     var goodOldTime = 0;
     var actualTime = 0;
 
-    
+
     camera.position.set(1.3250406408110678, 104.88500303402239, 20.99895565347296);
     const controls = new OrbitControls(camera, canvas);
-    
-    controls.enableRotate  = false;
+
+    controls.enableRotate = false;
     controls.update();
 
     renderer.autoClear = false;
@@ -206,12 +213,16 @@ function main() {
     `;
 
     const uniformsBackground = {
-      iTime: { value: 0 },
-      iResolution:  { value: new THREE.Vector3() },
+        iTime: {
+            value: 0
+        },
+        iResolution: {
+            value: new THREE.Vector3()
+        },
     };
     const material = new THREE.ShaderMaterial({
-      fragmentShader : fragmentShader2,
-      uniforms : uniformsBackground,
+        fragmentShader: fragmentShader2,
+        uniforms: uniformsBackground,
     });
     shadertoyScene.add(new THREE.Mesh(plane, material));
 
@@ -233,18 +244,18 @@ function main() {
     //3D model variables
     const faderWidth = 5;
     const spaceBetweenFaders = 11.75;
-    const maxFaderPosition = new THREE.Vector3(0,0.03,0);
-    const minFaderPosition = new THREE.Vector3(0,-4.1,16.9);
+    const maxFaderPosition = new THREE.Vector3(0, 0.03, 0);
+    const minFaderPosition = new THREE.Vector3(0, -4.1, 16.9);
     const minPotardAngle = 0;
     const maxPotardAngle = 5.1;
 
     //eventCreation
-    document.addEventListener( "touchmove", onTouchMove, false);
+    document.addEventListener("touchmove", onTouchMove, false);
     document.addEventListener("touchstart", onTouchStart, false);
     document.addEventListener("touchend", onTouchEnd, false);
-    document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-    document.addEventListener( 'mousedown', onDocumentMouseDown, false );
-    document.addEventListener( 'mouseup', onDocumentMouseUp, false );
+    document.addEventListener('mousemove', onDocumentMouseMove, false);
+    document.addEventListener('mousedown', onDocumentMouseDown, false);
+    document.addEventListener('mouseup', onDocumentMouseUp, false);
 
     {
         const color = 0xFFFFFF;
@@ -253,17 +264,19 @@ function main() {
         light.position.set(5, 10, 2);
         scene.add(light);
 
-        var lightAmbient = new THREE.AmbientLight( 0xF0F0F0 , 1); // soft white light
-        scene.add( lightAmbient );
+        var lightAmbient = new THREE.AmbientLight(0xF0F0F0, 1); // soft white light
+        scene.add(lightAmbient);
     }
 
     {
-    // Plane, that helps to determinate an intersection position
-    planeFaders = new THREE.Mesh(new THREE.PlaneBufferGeometry(130, 130, 8, 8), new THREE.MeshBasicMaterial({color: 0xffffff}));
-    planeFaders.position.set(0,-1,0);
-    planeFaders.lookAt(0,1,0.5);
-    planeFaders.visible = false;
-    scene.add(planeFaders);
+        // Plane, that helps to determinate an intersection position
+        planeFaders = new THREE.Mesh(new THREE.PlaneBufferGeometry(130, 130, 8, 8), new THREE.MeshBasicMaterial({
+            color: 0xffffff
+        }));
+        planeFaders.position.set(0, -1, 0);
+        planeFaders.lookAt(0, 1, 0.5);
+        planeFaders.visible = false;
+        scene.add(planeFaders);
     }
 
     {
@@ -320,12 +333,19 @@ function main() {
         }
         `;
 
-        
+
 
         uniforms = {
-            iTime: { value: 0 },
-            iResolution:  { value: new THREE.Vector3() },
-            waveform: {type: 't', value: 0},
+            iTime: {
+                value: 0
+            },
+            iResolution: {
+                value: new THREE.Vector3()
+            },
+            waveform: {
+                type: 't',
+                value: 0
+            },
         };
         const shaderMaterial = new THREE.ShaderMaterial({
             vertexShader: vertexShaderText,
@@ -335,8 +355,8 @@ function main() {
 
         planeScreen = new THREE.Mesh(new THREE.PlaneBufferGeometry(15, 10, 8, 8), shaderMaterial);
         var y = -1;
-        planeScreen.position.set(51.5,y,-19);
-        planeScreen.rotation.set(3*3.14/2+5.925,0,0);
+        planeScreen.position.set(51.5, y, -19);
+        planeScreen.rotation.set(3 * 3.14 / 2 + 5.925, 0, 0);
         scene.add(planeScreen);
     }
 
@@ -344,26 +364,26 @@ function main() {
         const gltfLoader = new GLTFLoader();
         var root;
         gltfLoader.load('models/mixer.glb', (gltf) => {
-        root = gltf.scene;
-        root.position.set(0,-3.75,0);
-        scene.add(root);
-        const box = new THREE.Box3().setFromObject(root);
+            root = gltf.scene;
+            root.position.set(0, -3.75, 0);
+            scene.add(root);
+            const box = new THREE.Box3().setFromObject(root);
 
-        const boxSize = box.getSize(new THREE.Vector3()).length();
-        //const boxCenter = box.getCenter(new THREE.Vector3());
-        const boxCenter = new THREE.Vector3(1.3553901638776724, -6.662529599268561, -2.3002362037373625);
+            const boxSize = box.getSize(new THREE.Vector3()).length();
+            //const boxCenter = box.getCenter(new THREE.Vector3());
+            const boxCenter = new THREE.Vector3(1.3553901638776724, -6.662529599268561, -2.3002362037373625);
 
-        camera.near = boxSize / 100;
-        camera.far = boxSize * 100;
+            camera.near = boxSize / 100;
+            camera.far = boxSize * 100;
 
-        camera.updateProjectionMatrix();
+            camera.updateProjectionMatrix();
 
-        // update the Trackball controls to handle the new size
-        controls.maxDistance = boxSize * 10;
-        controls.target.copy(boxCenter);
-        //controls.enablePan = false;
-        //controls.mouseButtons = { LEFT: THREE.MOUSE.RIGHT, MIDDLE: THREE.MOUSE.MIDDLE, RIGHT: THREE.MOUSE.LEFT };
-        controls.update();
+            // update the Trackball controls to handle the new size
+            controls.maxDistance = boxSize * 10;
+            controls.target.copy(boxCenter);
+            //controls.enablePan = false;
+            //controls.mouseButtons = { LEFT: THREE.MOUSE.RIGHT, MIDDLE: THREE.MOUSE.MIDDLE, RIGHT: THREE.MOUSE.LEFT };
+            controls.update();
         });
     }
 
@@ -372,11 +392,11 @@ function main() {
         var root;
         var newFader;
         gltfLoader.load('models/fader.glb', (gltf) => {
-            for(let i = 0; i <= 7; i ++){
+            for (let i = 0; i <= 7; i++) {
                 newFader = gltf.scene.clone();
                 //newFader.position.set(-41+spaceBetweenFaders*aYeahThisNameSucks,0,0);
-                newFader.position.set(-45.75+spaceBetweenFaders*i,0,1.2);
-                newFader.name = i+1;
+                newFader.position.set(-45.75 + spaceBetweenFaders * i, 0, 1.2);
+                newFader.name = i + 1;
                 faders.push(newFader);
                 scene.add(newFader);
             }
@@ -388,11 +408,11 @@ function main() {
         var root;
         var newPotard;
         gltfLoader.load('models/potard.glb', (gltf) => {
-            for(let i = 0; i <= 7; i ++){
+            for (let i = 0; i <= 7; i++) {
                 newPotard = gltf.scene.clone();
-                newPotard.name = i+1;
-                newPotard.position.set(-45.75+faderWidth/2+spaceBetweenFaders*i,-1,-19);
-                newPotard.rotation.set(5.925,0,0);
+                newPotard.name = i + 1;
+                newPotard.position.set(-45.75 + faderWidth / 2 + spaceBetweenFaders * i, -1, -19);
+                newPotard.rotation.set(5.925, 0, 0);
                 potards.push(newPotard);
                 scene.add(newPotard);
             }
@@ -403,49 +423,49 @@ function main() {
         return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
     };
 
-    function onDocumentMouseDown(event){
+    function onDocumentMouseDown(event) {
         var mouseX = (event.clientX / window.innerWidth) * 2 - 1;
         var mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
-        mouseEventStart(mouseX,mouseY);
+        mouseEventStart(mouseX, mouseY);
     }
 
-    function onDocumentMouseMove(event){
+    function onDocumentMouseMove(event) {
         var mouseX = (event.clientX / window.innerWidth) * 2 - 1;
         var mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
-        mouseEventMove(mouseX,mouseY);
+        mouseEventMove(mouseX, mouseY);
     }
 
-    function onTouchStart(event){
-        var mouseX = ( (event.targetTouches[0] ? event.targetTouches[0].pageX : event.changedTouches[event.changedTouches.length-1].pageX) / window.innerWidth ) * 2 - 1;
-        var mouseY = - ( (event.targetTouches[0] ? event.targetTouches[0].pageY : event.changedTouches[event.changedTouches.length-1].pageY) / window.innerHeight ) * 2 + 1;
+    function onTouchStart(event) {
+        var mouseX = ((event.targetTouches[0] ? event.targetTouches[0].pageX : event.changedTouches[event.changedTouches.length - 1].pageX) / window.innerWidth) * 2 - 1;
+        var mouseY = -((event.targetTouches[0] ? event.targetTouches[0].pageY : event.changedTouches[event.changedTouches.length - 1].pageY) / window.innerHeight) * 2 + 1;
         var vector = new THREE.Vector3(mouseX, mouseY, 1);
         vector.unproject(camera);
-        raycaster.set( camera.position, vector.sub( camera.position ).normalize() );
+        raycaster.set(camera.position, vector.sub(camera.position).normalize());
         var intersects = raycaster.intersectObject(planeFaders);
         planeFaders.position.copy(intersects[0].point);
-        mouseEventStart(mouseX,mouseY);
+        mouseEventStart(mouseX, mouseY);
     }
 
-    function onTouchMove(event){
-        var mouseX = ( (event.targetTouches[0] ? event.targetTouches[0].pageX : event.changedTouches[event.changedTouches.length-1].pageX) / window.innerWidth ) * 2 - 1;
-        var mouseY = - ( (event.targetTouches[0] ? event.targetTouches[0].pageY : event.changedTouches[event.changedTouches.length-1].pageY) / window.innerHeight ) * 2 + 1;
-        mouseEventMove(mouseX,mouseY)
+    function onTouchMove(event) {
+        var mouseX = ((event.targetTouches[0] ? event.targetTouches[0].pageX : event.changedTouches[event.changedTouches.length - 1].pageX) / window.innerWidth) * 2 - 1;
+        var mouseY = -((event.targetTouches[0] ? event.targetTouches[0].pageY : event.changedTouches[event.changedTouches.length - 1].pageY) / window.innerHeight) * 2 + 1;
+        mouseEventMove(mouseX, mouseY)
     }
 
-    function onTouchEnd(event){
+    function onTouchEnd(event) {
         mouseEventEnd(event);
     }
 
-    function onDocumentMouseUp(event){
+    function onDocumentMouseUp(event) {
         mouseEventEnd(event);
     }
 
-    function mouseEventStart(mouseX,mouseY){
+    function mouseEventStart(mouseX, mouseY) {
         // Get 3D vector from 3D mouse position using 'unproject' function
         var vector = new THREE.Vector3(mouseX, mouseY, 1);
         vector.unproject(camera);
         // Set the raycaster position
-        raycaster.set( camera.position, vector.sub( camera.position ).normalize() );
+        raycaster.set(camera.position, vector.sub(camera.position).normalize());
         // Find all intersected faders
         var intersects = raycaster.intersectObjects(faders, true);
         if (intersects.length > 0) {
@@ -470,52 +490,51 @@ function main() {
         }
     }
 
-    function mouseEventMove(mouseX,mouseY){
+    function mouseEventMove(mouseX, mouseY) {
         // Get 3D vector from 3D mouse position using 'unproject' function
         var vector = new THREE.Vector3(mouseX, mouseY, 1);
         vector.unproject(camera);
         // Set the raycaster position
-        raycaster.set( camera.position, vector.sub( camera.position ).normalize() );
+        raycaster.set(camera.position, vector.sub(camera.position).normalize());
         if (selectedFader) {
             var intersects = raycaster.intersectObject(planeFaders);
             // Reposition the object based on the intersection point with the planeFaders
-            if(intersects.length>0){
+            if (intersects.length > 0) {
                 var oldXPosition = selectedFader.position.x;
-                if(selectedFader.position.z<10){
+                if (selectedFader.position.z < 10) {
                     selectedFader.position.copy(intersects[0].point.sub(offset));
-                    selectedFader.position.set(oldXPosition,Math.min(selectedFader.position.y,maxFaderPosition.y),Math.max(selectedFader.position.z,maxFaderPosition.z));
-                }else
-                {
+                    selectedFader.position.set(oldXPosition, Math.min(selectedFader.position.y, maxFaderPosition.y), Math.max(selectedFader.position.z, maxFaderPosition.z));
+                } else {
                     selectedFader.position.copy(intersects[0].point.sub(offset));
-                    selectedFader.position.set(oldXPosition,Math.max(selectedFader.position.y,minFaderPosition.y),Math.min(selectedFader.position.z,minFaderPosition.z)); 
+                    selectedFader.position.set(oldXPosition, Math.max(selectedFader.position.y, minFaderPosition.y), Math.min(selectedFader.position.z, minFaderPosition.z));
                 }
-                var faderLevel = ((selectedFader.position.z - minFaderPosition.z)/(maxFaderPosition.z-minFaderPosition.z));
-                adjustVolume(selectedFader.parent.name,faderLevel);
+                var faderLevel = ((selectedFader.position.z - minFaderPosition.z) / (maxFaderPosition.z - minFaderPosition.z));
+                adjustVolume(selectedFader.parent.name, faderLevel);
             }
-        } else if (selectedPotard){
-            var deltaAngle = potardSensitivity*(mouseX - originalPotardMouseX) + originalPotardRotation;
+        } else if (selectedPotard) {
+            var deltaAngle = potardSensitivity * (mouseX - originalPotardMouseX) + originalPotardRotation;
 
-            if(selectedPotard.rotation.z<3.14){
-                selectedPotard.rotation.set(3.14/2,0,Math.max(deltaAngle,minPotardAngle));
-            }else{
-                selectedPotard.rotation.set(3.14/2,0,Math.min(deltaAngle,maxPotardAngle));
+            if (selectedPotard.rotation.z < 3.14) {
+                selectedPotard.rotation.set(3.14 / 2, 0, Math.max(deltaAngle, minPotardAngle));
+            } else {
+                selectedPotard.rotation.set(3.14 / 2, 0, Math.min(deltaAngle, maxPotardAngle));
             }
 
             var potardLevel = ((selectedPotard.rotation.z - minPotardAngle) / (maxPotardAngle - minPotardAngle));
-            adjustEffect(selectedPotard.parent.name,potardLevel);
+            adjustEffect(selectedPotard.parent.name, potardLevel);
         } else {
-            var intersects = raycaster.intersectObjects(faders,true);
+            var intersects = raycaster.intersectObjects(faders, true);
             if (intersects.length > 0) {
                 planeFaders.position.copy(intersects[0].object.position);
             }
         }
     }
 
-    function mouseEventEnd(event){
+    function mouseEventEnd(event) {
         controls.enabled = true;
         selectedFader = null;
         selectedPotard = null;
-        offset = new THREE.Vector3(0,0,0);
+        offset = new THREE.Vector3(0, 0, 0);
     }
 
     function resizeRendererToDisplaySize(renderer) {
@@ -524,33 +543,33 @@ function main() {
         const height = canvas.clientHeight;
         const needResize = canvas.width !== width || canvas.height !== height;
         if (needResize) {
-        renderer.setSize(width, height, false);
+            renderer.setSize(width, height, false);
         }
         return needResize;
     }
 
     function render(time) {
-        if(isMusicPlaying){
-            actualTime += (time-goodOldTime) * 0.001;  // convert to seconds
-        }
-        
-        
-        if (resizeRendererToDisplaySize(renderer)) {
-        const canvas = renderer.domElement;
-        camera.aspect = canvas.clientWidth / canvas.clientHeight;
-        camera.updateProjectionMatrix();
+        if (isMusicPlaying) {
+            actualTime += (time - goodOldTime) * 0.001; // convert to seconds
         }
 
-        if(analyser != null && dataArray != undefined && isMusicPlaying){
+
+        if (resizeRendererToDisplaySize(renderer)) {
+            const canvas = renderer.domElement;
+            camera.aspect = canvas.clientWidth / canvas.clientHeight;
+            camera.updateProjectionMatrix();
+        }
+
+        if (analyser != null && dataArray != undefined && isMusicPlaying) {
             analyser.getByteTimeDomainData(dataArray);
 
             var awidth = analyser.fftSize;
             var aheight = 1;
 
             var size = awidth * aheight;
-            var data = new Uint8Array( 3 * size );
+            var data = new Uint8Array(3 * size);
 
-            for ( var i = 0; i < size; i ++ ) {
+            for (var i = 0; i < size; i++) {
 
                 var r = dataArray[i];
                 var g = dataArray[i];
@@ -558,13 +577,13 @@ function main() {
 
                 var stride = i * 3;
 
-                data[ stride ] = r;
-                data[ stride + 1 ] = g;
-                data[ stride + 2 ] = b;
+                data[stride] = r;
+                data[stride + 1] = g;
+                data[stride + 2] = b;
 
             }
 
-            var texture = new THREE.DataTexture( data, awidth, aheight, THREE.RGBFormat );
+            var texture = new THREE.DataTexture(data, awidth, aheight, THREE.RGBFormat);
 
             uniforms.iResolution.value.set(20, 10, 1);
             uniforms.iTime.value = actualTime;
@@ -574,7 +593,7 @@ function main() {
             uniformsBackground.iResolution.value.set(canvas.width, canvas.height, 1);
         }
 
-        if(!isMobileDevice()){
+        if (!isMobileDevice()) {
             renderer.render(shadertoyScene, shadertoyCamera);
         }
         renderer.render(scene, camera);
