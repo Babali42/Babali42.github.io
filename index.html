@@ -1,1 +1,193 @@
-<!doctype html><meta charset=UTF-8><html lang=en><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css><title>FayacanSon Dub Mixer</title><link rel=stylesheet href=https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css><link rel=stylesheet href=styles/animation.min.css><link href=https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.0.0/introjs.css rel=stylesheet><body class="modal-active main-page"><div id=modal-container class=two><div id=mod class=modal-background><div class=modal style="max-height:calc(100vh - 200px);overflow-y:auto"><div id=startModal><h2>Fayacan Son dub mixer</h2><h3><div style=display:inline>Chargement des sons :</div><div style=display:inline id=number-sounds-loaded>0</div><div style=display:inline>%</div></h3><button class="button button-disabled" id=close-modal disabled>Start</button> <button class="button button-disabled" id=tuto-modal disabled>Tutoriel</button> <button class=button onclick=myFunction()>Crédits</button> <svg class=modal-svg xmlns=http://www.w3.org/2000/svg width=100% height=100% preserveAspectRatio=none><rect x=0 y=0 fill=none width=315 height=180 rx=3 ry=3></rect></svg></div><div id=creditModal class=creditModal style=display:none><h2 style=margin-top:0>Equipe :</h2><div class=flex style=margin-top:15px><div class="team-member-img team-img-1"></div></div><div class="flex icon-list" style=margin-top:10px><a href=https://www.facebook.com/FayacanSon/ target=_blank><span class="fa fa-facebook-official icon fa-lg facebook"></span></a> <a href=https://www.youtube.com/channel/UCSGj18XL9iVpVZ4y7Rg3IEA target=_blank><span class="fa fa-youtube icon fa-lg youtube"></span></a> <a href=https://soundcloud.com/user-683591571 target=_blank><span class="fa fa-soundcloud icon fa-lg soundcloud"></span></a></div><h3 style=margin-bottom:5px;margin-top:5px>Fayacan Son</h3><div>Concept, musique et modèle 3D</div><div class=flex style=margin-top:60px><div class="team-member-img team-img-2"></div></div><div class="flex icon-list" style=margin-top:10px><a href=https://github.com/Babali42 target=_blank><span class="fa fa-github icon fa-lg github"></span></a> <a href=https://soundcloud.com/babali target=_blank><span class="fa fa-soundcloud icon fa-lg soundcloud"></span></a></div><h3 style=margin-bottom:5px;margin-top:5px>Babali</h3><div>Développement de la table de mixage interactive</div><div class=flex style=margin-top:60px><div class="team-member-img team-img-3"></div></div><div class="flex icon-list" style=margin-top:10px><a href=https://github.com/angemort target=_blank><span class="fa fa-github icon fa-lg github"></span></a> <a href=https://www.instagram.com/analyweb/ target=_blank><span class="fa fa-instagram icon fa-lg instagram"></span></a> <a href=https://www.linkedin.com/in/alexandre-bornand-analyweb/ target=_blank><span class="fa fa-linkedin icon fa-lg linkedin"></span></a> <a href=https://stackoverflow.com/users/11329097/alexandre target=_blank><span class="fa fa-stack-overflow icon fa-lg stack-overflow"></span></a></div><h3 style=margin-bottom:5px;margin-top:5px>Alexandre de Analy-Web</h3><div>Développement du menu</div><h2 style=margin-top:60px>Intro :</h2><p>Dub Mixer by Fayacan Son Corp. est probablement l'un des produits les plus novateurs dans cette galaxie que l'on appelle l'Internet.<p>Conçu à des fins de fun illimité, cet appareil virtuel vous permettra de vous identifier à vos producteurs de Reggae and Dub Music favoris tel que Fayacan Son original sound.<h2>Le son :</h2><p>L'instrumentale est composé en full digital style sur le logiciel FL Studio. La musique, d'une structure volontairement simple, permet à l'utilisateur de comprendre au plus vite les mécaniques du mixer.<div><p>Ces mécaniques sont les suivantes:<br>-Gestion du volume de chaque piste<br>-Activation d'un effet par piste</div><p>Cependant, pour passer un bon moment entre amis devant Dub Mixer by Fayacan Son Corp. il était nécessaire d'y intégrer des effets "porcins" ou encore "éclatés": réverbération sur les snares, cut off sur les basses, doublage du kick. Chacun aura remarqué ce superbe phaser sur la piste "Melodic".<p>Le saviez-vous? Un export en MP3 de faible qualité vous assure des temps de chargements balayant toute concurrence!<h2>L'application web :</h2><p>Cette application web a été réalisée avec les technologies classiques du web : html css et js.<p>Afin de ne pas réinventer la roue nous avons utilisé des bibliothèques javascript comme <a href=https://threejs.org/ target=_blank class=credit-link>Three.js</a> pour la 3D, <a href=https://alemangui.github.io/pizzicato/ target=_blank class=credit-link>Pizzicato.js</a> pour le son et <a href=https://introjs.com/ target=_blank class=credit-link>Intro.js</a> pour le tutoriel.<p>On a ensuite rassemblé le modèle 3D, conçu dans Blender, avec les pistes sons de Fayacan pour créer la table de mixage.<p>Le plus compliqué c'était les translations des faders et rotations des potards, on a du faire des maths !<p>Enfin le petit écran du mixeur, et l'animation badante (<a href=https://www.shadertoy.com/view/wsl3WB target=_blank class=credit-link>Hexagone by BigWIngs</a>) en fond d'écran, sur PC, sont des shaders webgl. Parfait pour bien kiffer !<p>Pour finir, si tu veux en savoir plus, le code source est disponible sur <a href=https://github.com/Babali42 target=_blank class=credit-link>github</a>.<h3></h3><div><button class=button onclick=myFunction()>Retour</button></div><svg class=modal-svg xmlns=http://www.w3.org/2000/svg width=100% height=100% preserveAspectRatio=none><rect x=0 y=0 fill=none width=315 height=180 rx=3 ry=3></rect></svg></div></div></div></div><div class=content data-hint="Envoie ton mix ici en ajustant le volume via les faders (mouvement de haut en bas) et les effets avec les potards (mouvement de gauche à droite) !" data-hintposition=top-middle><div class="menu-top-left invisible"><div class=open-modal><i class="fa fa-bars fa-2x" aria-hidden=true data-hint="Retour vers le menu" data-hintposition=middle-middle><span>Menu</span></i></div><div id=facebookLink><i class="fa fa-facebook-official fa-2x" aria-hidden=true><span>Facebook</span></i></div><div id=youtubeLink><i class="fa fa-youtube fa-2x" aria-hidden=true><span>Youtube</span></i></div><div id=soundcloudLink><i class="fa fa-soundcloud fa-2x" aria-hidden=true><span>Soundcloud</span></i></div><div id=play><i class="fa fa-play fa-2x" aria-hidden=true data-hint="Jouer ou arrêter le son" data-hintposition=middle-middle></i></div><div id=pause class=invisible><i class="fa fa-pause fa-2x" aria-hidden=true></i></div></div><canvas id=c></canvas></div><script src=https://code.jquery.com/jquery-3.3.1.slim.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.0.0/intro.js></script><script>function redirect_blank(e){var t=document.createElement("a");t.target="_blank",t.href=e,t.click()}function closeModal(){$("#modal-container").addClass("out"),$("body").removeClass("modal-active"),$(".menu-top-left").removeClass("invisible"),$(".menu-bottom-center").removeClass("invisible")}function myFunction(){var e=document.getElementById("creditModal"),t=document.getElementById("startModal");"none"===e.style.display?(e.style.display="flex",t.style.display="none"):(e.style.display="none",t.style.display="table-cell")}$(".open-modal").click((function(){$("#modal-container").removeAttr("class").addClass("two"),$("body").addClass("modal-active"),pause(),intro&&intro.hideHints()})),$("#close-modal").click((function(){closeModal(),play()})),$("#tuto-modal").click((function(){closeModal(),intro=introJs(),intro.setOption("hintButtonLabel","Ok !"),intro.addHints()})),$("#tuto-credit").click((function(){location.href="credits.html"})),document.getElementById("facebookLink").onclick=function(){redirect_blank("https://www.facebook.com/FayacanSon/")},document.getElementById("youtubeLink").onclick=function(){redirect_blank("https://www.youtube.com/channel/UCSGj18XL9iVpVZ4y7Rg3IEA")},document.getElementById("soundcloudLink").onclick=function(){redirect_blank("https://soundcloud.com/user-683591571")},document.getElementById("play").onclick=function(){play()},document.getElementById("pause").onclick=function(){pause()}</script><script src=https://cdnjs.cloudflare.com/ajax/libs/pizzicato/0.6.4/Pizzicato.min.js></script><script src=scripts/sound.min.js></script><script type=module src=scripts/animation.min.js></script>
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html lang="en">
+	<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Animate CCS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+		
+    <title>FayacanSon Dub Mixer</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/animation.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.0.0/introjs.css" rel="stylesheet">
+	</head>
+	<body class="modal-active main-page">
+        <div id="modal-container" class="two" >
+            <div id="mod" class="modal-background">
+                <div class="modal" style="max-height: calc(100vh - 200px);
+                overflow-y: auto;">
+                  <div id="startModal">
+                    <h2>Fayacan Son dub mixer</h2>
+                    <h3>
+                      <div style="display:inline">Chargement des sons :</div>
+                      <div style="display:inline" id="number-sounds-loaded">0</div>
+                      <div style="display:inline">%</div>
+                    </h3>
+                    <button class="button button-disabled" id="close-modal" disabled="true" >Start</button>
+                    <button class="button button-disabled" id="tuto-modal" disabled="true" >Tutoriel</button>
+                    <button class="button" onclick="myFunction()">Crédits</button>
+                    <svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+                      <rect x="0" y="0" fill="none" width="315" height="180" rx="3" ry="3"></rect>
+                    </svg>
+                  </div>
+  
+                  <div id="creditModal" class="creditModal" style="display: none;">
+                    <h2 style="margin-top: 0;">Equipe :</h2>
+                    <div class="flex" style="margin-top: 15px;">
+                      <div class="team-member-img team-img-1"></div>
+                    </div>
+                    <div class="flex icon-list" style="margin-top: 10px;">
+                      <a href="https://www.facebook.com/FayacanSon/" target="_blank"><span class="fa fa-facebook-official icon fa-lg facebook"></span></a>
+                      <a href="https://www.youtube.com/channel/UCSGj18XL9iVpVZ4y7Rg3IEA" target="_blank"><span class="fa fa-youtube icon fa-lg youtube"></span></a>
+                      <a href="https://soundcloud.com/user-683591571" target="_blank"><span class="fa fa-soundcloud icon fa-lg soundcloud"></span></a>
+                    </div>
+                    <h3 style="margin-bottom: 5px; margin-top: 5px;">Fayacan Son</h3>
+                    <div>Concept, musique et modèle 3D</div>
+                    <div class="flex" style="margin-top: 60px;">
+                      <div class="team-member-img team-img-2"></div>
+                    </div>
+                    <div class="flex icon-list" style="margin-top: 10px;">
+                      <a href="https://github.com/Babali42" target="_blank"><span class="fa fa-github icon fa-lg github"></span></a>
+                      <a href="https://soundcloud.com/babali" target="_blank"><span class="fa fa-soundcloud icon fa-lg soundcloud"></span></a>
+                    </div>
+                    <h3 style="margin-bottom: 5px; margin-top: 5px;">Babali</h3>
+                    <div>Développement de la table de mixage interactive</div>
+                    <div class="flex" style="margin-top: 60px;">
+                      <div class="team-member-img team-img-3"></div>
+                    </div>
+                    <div class="flex icon-list" style="margin-top: 10px;">
+                      <a href="https://github.com/angemort" target="_blank"><span class="fa fa-github icon fa-lg github"></span></a>
+                      <a href="https://www.instagram.com/analyweb/" target="_blank"><span class="fa fa-instagram icon fa-lg instagram"></span></a>
+                      <a href="https://www.linkedin.com/in/alexandre-bornand-analyweb/" target="_blank"><span class="fa fa-linkedin icon fa-lg linkedin"></span></a>
+                      <a href="https://stackoverflow.com/users/11329097/alexandre" target="_blank"><span class="fa fa-stack-overflow icon fa-lg stack-overflow"></span></a>
+                    </div>
+                    <h3 style="margin-bottom: 5px; margin-top: 5px;">Alexandre de Analy-Web</h3>
+                    <div>Développement du menu</div>
+                    <h2 style="margin-top: 60px;">Intro :</h2>
+                    <p>Dub Mixer by Fayacan Son Corp. est probablement l'un des produits les plus novateurs dans cette galaxie que l'on appelle l'Internet.</p>
+                    <p>Conçu à des fins de fun illimité, cet appareil virtuel vous permettra de vous identifier à vos producteurs de Reggae and Dub Music favoris tel que Fayacan Son original sound.</p>
+                    <h2>Le son :</h2>
+                    <p>L'instrumentale est composé en full digital style sur le logiciel FL Studio. La musique, d'une structure volontairement simple, permet à l'utilisateur de comprendre au plus vite les mécaniques du mixer.</p>
+                    <div>
+                      <p>Ces mécaniques sont les suivantes:<br>
+                        -Gestion du volume de chaque piste<br>
+                        -Activation d'un effet par piste</p>
+                    </div>
+                    <p>Cependant, pour passer un bon moment entre amis devant Dub Mixer by Fayacan Son Corp. il était nécessaire d'y intégrer des effets "porcins" ou encore "éclatés": réverbération sur les snares, cut off sur les basses, doublage du kick.
+                      Chacun aura remarqué ce superbe phaser sur la piste "Melodic".</p>
+                    <p>Le saviez-vous? Un export en MP3 de faible qualité vous assure des temps de chargements balayant toute concurrence!</p>
+                    <h2>L'application web :</h2>
+                    <p>Cette application web a été réalisée avec les technologies classiques du web : html css et js.</p>
+                    <p>Afin de ne pas réinventer la roue nous avons utilisé des bibliothèques javascript comme <a href="https://threejs.org/" target="_blank" class="credit-link">Three.js</a> pour la 3D, <a href="https://alemangui.github.io/pizzicato/" target="_blank" class="credit-link">Pizzicato.js</a> pour le son et <a href="https://introjs.com/" target="_blank" class="credit-link">Intro.js</a> pour le tutoriel.</p>
+                    <p>On a ensuite rassemblé le modèle 3D, conçu dans Blender, avec les pistes sons de Fayacan pour créer la table de mixage.</p>
+                    <p>Le plus compliqué c'était les translations des faders et rotations des potards, on a du faire des maths !</p>
+                    <p>Enfin le petit écran du mixeur, et l'animation badante (<a href="https://www.shadertoy.com/view/wsl3WB" target="_blank" class="credit-link">Hexagone by BigWIngs</a>) en fond d'écran, sur PC, sont des shaders webgl. Parfait pour bien kiffer !</p>
+                    <p>Pour finir, si tu veux en savoir plus, le code source est disponible sur <a href="https://github.com/Babali42" target="_blank" class="credit-link">github</a>.</p>
+                    <h3></h3>
+                    <div>
+                      <button class="button" onclick="myFunction()">Retour</button>
+                    </div>
+                    <svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+                      <rect x="0" y="0" fill="none" width="315" height="180" rx="3" ry="3"></rect>
+                    </svg>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="content" data-hint="Envoie ton mix ici en ajustant le volume via les faders (mouvement de haut en bas) et les effets avec les potards (mouvement de gauche à droite) !" data-hintPosition="top-middle">
+          <div class="menu-top-left invisible">
+              <div class="open-modal"><i class="fa fa-bars fa-2x" aria-hidden="true" data-hint="Retour vers le menu" data-hintPosition="middle-middle"><span>Menu</span></i></div>
+              <div id="facebookLink"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"><span>Facebook</span></i></div>
+              <div id="youtubeLink"><i class="fa fa-youtube fa-2x" aria-hidden="true"><span>Youtube</span></i></div>
+              <div id="soundcloudLink"><i class="fa fa-soundcloud fa-2x" aria-hidden="true"><span>Soundcloud</span></i></div>
+              <div id="play"><i class="fa fa-play fa-2x" aria-hidden="true" data-hint="Jouer ou arrêter le son" data-hintPosition="middle-middle"></i></div>
+              <div id="pause" class="invisible"><i class="fa fa-pause fa-2x" aria-hidden="true"></i></div>
+          </div>
+          <canvas id="c"></canvas>
+        </div>
+
+        <!--JS Bootstrap-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.0.0/intro.js"></script>
+        <script type="text/javascript">
+          //Func open Modal
+          $('.open-modal').click(function(){
+            $('#modal-container').removeAttr('class').addClass('two');
+            $('body').addClass('modal-active');
+            pause();
+            if(intro){
+              intro.hideHints();
+            }
+          });
+          //Func close Modal
+          $('#close-modal').click(function(){
+            closeModal();
+            play();
+          });
+
+          $('#tuto-modal').click(function(){
+            closeModal();
+            intro = introJs();
+            intro.setOption("hintButtonLabel", "Ok !");
+            intro.addHints();
+          });
+
+          $('#tuto-credit').click(function(){
+            location.href = "credits.html";
+          });
+
+          document.getElementById("facebookLink").onclick = function () {
+            redirect_blank("https://www.facebook.com/FayacanSon/");
+          };
+
+          document.getElementById("youtubeLink").onclick = function () {
+            redirect_blank("https://www.youtube.com/channel/UCSGj18XL9iVpVZ4y7Rg3IEA");
+          };
+
+          document.getElementById("soundcloudLink").onclick = function () {
+            redirect_blank("https://soundcloud.com/user-683591571");
+          };
+
+          function redirect_blank(url) {
+            var a = document.createElement('a');
+            a.target='_blank';
+            a.href=url;
+            a.click();
+          }
+
+          document.getElementById("play").onclick = function () {
+            play();
+          };
+
+          document.getElementById("pause").onclick = function () {
+            pause();
+          };
+
+          function closeModal(){
+            $('#modal-container').addClass('out');
+            $('body').removeClass('modal-active');
+            $('.menu-top-left').removeClass('invisible');
+            $('.menu-bottom-center').removeClass('invisible');
+          }
+
+          function myFunction() {
+              var creditModal = document.getElementById("creditModal");
+              var startModal = document.getElementById("startModal");
+              if (creditModal.style.display === "none") {
+                  creditModal.style.display = "flex";
+                  startModal.style.display = "none";
+              } else {
+                 creditModal.style.display = "none";
+                 startModal.style.display = "table-cell";
+              }
+          } 
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pizzicato/0.6.4/Pizzicato.min.js"></script>
+        <script src="scripts/sound.min.js"></script>
+		    <script type="module" src="scripts/animation.min.js"></script>
+	</body>
+</html>
