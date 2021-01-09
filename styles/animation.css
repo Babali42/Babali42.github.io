@@ -359,29 +359,6 @@ body.modal-active {
     justify-content: center;
 }
 
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        -webkit-transform: translate3d(0, 100%, 0);
-        transform: translate3d(0, 100%, 0);
-    }
-
-    100% {
-        opacity: 1;
-        -webkit-transform: none;
-        transform: none;
-    }
-}
-
-.team-info-3 {
-    opacity: 0;
-}
-
-.team-img-3:hover  > .team-info-1 {
-    opacity: 1;
-    transform : Scale(1);
-}
-
 .flex{
     display: flex;
     justify-content: center;
