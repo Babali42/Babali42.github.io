@@ -1,0 +1,21 @@
+{
+  "name": "metal",
+  "bpm": 180,
+  "tracks": [
+    {
+      "name": "Snare",
+      "fileName": "metal/snare.mp3",
+      "steps": [" ", " ", " ", " ", "X", " ", " ", " ", " ", " ", " ", " ", "X", " ", " ", " "]
+    },
+    {
+      "name": "Hats",
+      "fileName": "metal/crash.mp3",
+      "steps": ["X", " ", " ", " ", "X", " ", " ", " ", "X", " ", " ", " ", "X", " ", " ", " "]
+    },
+    {
+      "name": "Kick",
+      "fileName": "metal/kick.mp3",
+      "steps": ["X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X"]
+    }
+  ]
+}
