@@ -1,0 +1,26 @@
+{
+  "name": "psytrance",
+  "bpm": 140,
+  "tracks": [
+    {
+      "name": "Hats",
+      "fileName": "techno/open_hat.mp3",
+      "steps": [" ", " ", " ", " ", " ", " ", " ", " ", "X", " ", " ", " ", " ", " ", " ", " "]
+    },
+    {
+      "name": "Snare",
+      "fileName": "techno/snare.mp3",
+      "steps": ["X", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
+    },
+    {
+      "name": "Kick",
+      "fileName": "techno/kick.mp3",
+      "steps": ["X", " ", " ", " ", "X", " ", " ", " ", "X", " ", " ", " ", "X", " ", " ", " "]
+    },
+    {
+      "name": "Bass",
+      "fileName": "psytrance/bass.wav",
+      "steps": [" ", "X", "X", "X", " ", "X", "X", "X", " ", "X", "X", "X", " ", "X", "X", "X"]
+    }
+  ]
+}
