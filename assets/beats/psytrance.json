@@ -1,20 +1,24 @@
 {
   "name": "psytrance",
-  "bpm": 140,
+  "bpm": 125,
   "tracks": [
     {
-      "name": "Hats",
-      "fileName": "techno/open_hat.mp3",
-      "steps": [" ", " ", " ", " ", " ", " ", " ", " ", "X", " ", " ", " ", " ", " ", " ", " "]
+      "name": "Closed hats",
+      "fileName": "psytrance/closed-hat.wav",
+      "steps": ["X", " ", " ", " ", "X", " ", " ", " ", "X", " ", " ", " ", "X", " ", " ", " "]
+    },{
+      "name": "Open hats",
+      "fileName": "psytrance/open-hat.wav",
+      "steps": [" ", " ", "X", " ", " ", " ", "X", " ", " ", " ", "X", " ", " ", " ", "X", " "]
     },
     {
       "name": "Snare",
-      "fileName": "techno/snare.mp3",
-      "steps": ["X", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
+      "fileName": "psytrance/snare.wav",
+      "steps": [" ", " ", " ", " ", "X", " ", " ", " ", " ", " ", " ", " ", "X", " ", " ", " "]
     },
     {
       "name": "Kick",
-      "fileName": "techno/kick.mp3",
+      "fileName": "psytrance/kick.wav",
       "steps": ["X", " ", " ", " ", "X", " ", " ", " ", "X", " ", " ", " ", "X", " ", " ", " "]
     },
     {
