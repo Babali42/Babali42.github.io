@@ -4,17 +4,17 @@
   "tracks": [
     {
       "name": "Snare",
-      "fileName": "techno/snare.mp3",
+      "fileName": "techno/snare.wav",
       "steps": [" ", " ", " ", " ", "X", " ", " ", " ", " ", " ", " ", " ", "X", " ", " ", " "]
     },
     {
       "name": "Hats",
-      "fileName": "techno/open_hat.mp3",
+      "fileName": "techno/hat.wav",
       "steps": [" ", " ", "X", " ", " ", " ", "X", " ", " ", " ", "X", " ", " ", " ", "X", " "]
     },
     {
       "name": "Kick",
-      "fileName": "techno/kick.mp3",
+      "fileName": "techno/kick.wav",
       "steps": ["X", " ", " ", " ", " ", " ", " ", " ", " ", " ", "X", " ", " ", " ", "X", " "]
     }
   ]
