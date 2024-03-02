@@ -1,0 +1,54 @@
+﻿[
+  {
+    "label": "Metal",
+    "subGenres": [
+      {
+        "label": "Metal",
+        "fileName": "metal"
+      },
+      {
+        "label": "Rock",
+        "fileName": "rock-beat"
+      },
+      {
+        "label": "Rock variation",
+        "fileName": "rock-beat-variation"
+      },
+      {
+        "label": "Half time groove",
+        "fileName": "half-time-groove"
+      }
+    ]
+  },
+  {
+    "label": "Techno",
+    "subGenres" : [
+      {
+        "label": "4 on the floor",
+        "fileName": "techno"
+      }
+    ]
+  },
+  {
+    "label": "Garage",
+    "subGenres" : [
+      {
+        "label": "2 Step",
+        "fileName": "garage"
+      },
+      {
+        "label": "Drum & Bass",
+        "fileName": "drum-n-bass"
+      }
+    ]
+  },
+  {
+    "label": "Trance",
+    "subGenres" : [
+      {
+        "label": "Psytrance",
+        "fileName": "psytrance"
+      }
+    ]
+  }
+]
