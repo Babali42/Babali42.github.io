@@ -50,5 +50,14 @@
         "fileName": "psytrance"
       }
     ]
+  },
+  {
+    "label": "Indus",
+    "subGenres" : [
+      {
+        "label": "EBM",
+        "fileName": "ebm"
+      }
+    ]
   }
 ]
