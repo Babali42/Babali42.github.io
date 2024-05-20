@@ -57,10 +57,19 @@
   },
   {
     "label": "Indus",
-    "subGenres" : [
+    "subGenres": [
       {
         "label": "EBM",
         "fileName": "ebm"
+      }
+    ]
+  },
+  {
+    "label": "Dub",
+    "subGenres" : [
+      {
+        "label": "Dub",
+        "fileName": "dub"
       }
     ]
   }
