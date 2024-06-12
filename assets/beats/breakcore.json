@@ -1,0 +1,27 @@
+{
+  "name": "BreakCore",
+  "bpm": 180,
+  "tracks": [
+    {
+      "name": "Snare (accent)",
+      "fileName": "techno/snare.wav",
+      "steps": [" ", " ", " ", " ", "X", " ", " ", " ", " ", " ", " ", " ", "X", " ", " ", " "]
+    },
+    {
+      "name": "Snare (main)",
+      "fileName": "drum-n-bass/snare.wav",
+      "steps": [" ", " ", " ", " ", "X", " ", " ", "X", " ", "X", " ", " ", "X", " ", " ", " "]
+    },
+    {
+      "name": "Hats",
+      "fileName": "techno/hat.wav",
+      "steps": ["X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X"]
+    },
+    {
+      "name": "Kick",
+      "fileName": "techno/kick.wav",
+      "steps": ["X", " ", "X", " ", " ", " ", " ", " ", " ", " ", "X", "X", " ", " ", " ", " "]
+    }
+  ],
+  "source" : "https://onlinesequencer.net/2502318"
+}
