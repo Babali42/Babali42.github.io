@@ -1,0 +1,27 @@
+{
+  "name": "Jersey club",
+  "bpm": 140,
+  "tracks": [
+    {
+      "name": "Bed squeak (low)",
+      "fileName": "jersey-club/squeak_low.mp3",
+      "steps": ["X", " ", " ", " ", " ", " ", " ", " ", "X", " ", " ", " ", " ", " ", " ", " "]
+    },
+    {
+      "name": "Bed squeak (high)",
+      "fileName": "jersey-club/squeak_high.mp3",
+      "steps": [" ", " ", " ", " ", "X", " ", " ", " ", " ", " ", " ", " ", "X", " ", " ", " "]
+    },
+    {
+      "name": "Snare",
+      "fileName": "jersey-club/snare.mp3",
+      "steps": ["X", " ", " ", " ", "X", " ", " ", " ", "X", " ", " ", "X", " ", " ", "X", " "]
+    },
+    {
+      "name": "Kick",
+      "fileName": "jersey-club/kick.mp3",
+      "steps": ["X", " ", " ", " ", "X", " ", " ", " ", "X", " ", " ", "X", " ", " ", "X", " "]
+    }
+  ],
+  "source" : "https://youtu.be/qJtvgAYAuvs?si=ifBHVgsfUL32E2R0"
+}

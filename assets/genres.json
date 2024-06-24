@@ -34,9 +34,18 @@
       {
         "label": "Gabber",
         "fileName": "gabber"
+      }
+    ]
+  },
+  {
+    "label": "Breakbeat",
+    "subGenres" : [
+      {
+        "label": "Jersey club",
+        "fileName": "jersey-club"
       },
       {
-        "label": "BreakCore",
+        "label": "Breakcore",
         "fileName": "breakcore"
       }
     ]
